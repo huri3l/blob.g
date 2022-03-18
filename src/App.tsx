@@ -1,7 +1,9 @@
+import { Header } from './components/commons/Header/index';
+
 function App() {
   return (
     <div>
-      <h1>Ready to code</h1>
+      <Header />
     </div>
   );
 }
