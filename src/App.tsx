@@ -1,17 +1,23 @@
-import { Center } from '@chakra-ui/react';
+import { Center, VStack } from '@chakra-ui/react';
 import { Header } from './components/commons/Header/index';
-import { VerticalCard } from './components/card/VerticalCard';
+import { HorizontalCard } from './components/card/HorizontalCard';
+import { Card } from './components/card/Card';
 
-import { vertical_cards } from './components-mock.json';
+import { horizontal_cards, cards } from './components-mock.json';
 
 function App() {
   return (
     <div>
       <Header />
       <Center>
-        {vertical_cards.map((vertical_card) => (
-          <VerticalCard key={vertical_card.title} card={vertical_card} />
-        ))}
+        <VStack spacing="64px" marginY="64px">
+          {horizontal_cards.map((horizontal_card) => (
+            <HorizontalCard key={horizontal_card.title} card={horizontal_card} />
+          ))}
+          {cards.map((card) => (
+            <Card key={card.title} card={card} />
+          ))}
+        </VStack>
       </Center>
     </div>
   );

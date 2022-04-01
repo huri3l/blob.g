@@ -1,13 +1,33 @@
 {
-  "vertical_cards": [
+  "horizontal_cards": [
     {
-      "title": "Vertical Card",
+      "title": "Horizontal Card",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum ipsum posuere ipsum iaculis sollicitudin. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut mollis consequat massa, bibendum semper velit cursus a. Aenean scelerisque faucibus sapien, ac malesuada nibh fermentum quis. Integer auctor rhoncus congue. Nullam at dolor interdum, hendrerit massa nec, interdum nisi. Aenean consequat lectus sem. Donec scelerisque justo sit amet neque tristique interdum. Integer non quam tellus. Integer lacinia luctus lacinia. Phasellus dictum augue ut enim efficitur lacinia. Maecenas a justo et eros porttitor lobortis. Suspendisse viverra arcu eget bibendum tristique. Ut semper, nisl nec ultricies malesuada, urna nunc elementum augue, sit amet cursus dolor urna quis nunc. Proin varius, ligula eu facilisis egestas, tortor eros molestie felis, eget efficitur massa lorem non magna.",
       "image": {
         "url": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
         "alt": "Imagem de uma Sala de Estar"
       },
       "publishDate": "05 de mar. 2022"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Card",
+      "content": "Card como componente. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel dictum mi, euismod congue mi. Nunc porttitor accumsan ante nec accumsan. Sed a tellus nec urna pellentesque lacinia nec nec ex. Phasellus pharetra ac quam mattis dignissim. Nam a feugiat dolor. Maecenas vulputate urna ac augue tempor, imperdiet sollicitudin nisi tincidunt. Donec in risus et felis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel dictum mi, euismod congue mi. Nunc porttitor accumsan ante nec accumsan. Sed a tellus nec urna pellentesque lacinia nec nec ex. Phasellus pharetra ac quam mattis dignissim. Nam a feugiat dolor. Maecenas vulputate urna ac augue tempor, imperdiet sollicitudin nisi tincidunt. Donec in risus et felis tempus",
+      "image": {
+        "url": "https://images.unsplash.com/photo-1642516254185-81a8133cc6a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "alt": "Imagem de Ondas"
+      },
+      "publishDate": "05 de mar. 2022"
+    },
+    {
+      "title": "Card Sem Imagem",
+      "content": "Card como componente. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel dictum mi, euismod congue mi. Nunc porttitor accumsan ante nec accumsan. Sed a tellus nec urna pellentesque lacinia nec nec ex. Phasellus pharetra ac quam mattis dignissim. Nam a feugiat dolor. Maecenas vulputate urna ac augue tempor, imperdiet sollicitudin nisi tincidunt. Donec in risus et felis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel dictum mi, euismod congue mi. Nunc porttitor accumsan ante nec accumsan. Sed a tellus nec urna pellentesque lacinia nec nec ex. Phasellus pharetra ac quam mattis dignissim. Nam a feugiat dolor. Maecenas vulputate urna ac augue tempor, imperdiet sollicitudin nisi tincidunt. Donec in risus et felis tempus",
+      "publishDate": "05 de mar. 2022"
+    },
+    {
+      "title": "Card Sem Imagem",
+      "content": "Card como componente. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel dictum mi, euismod congue mi. Nunc porttitor accumsan ante nec accumsan. Sed a tellus nec urna pellentesque lacinia nec nec ex. Phasellus pharetra ac quam mattis dignissim. Nam a feugiat dolor. Maecenas vulputate urna ac augue tempor, imperdiet sollicitudin nisi tincidunt. Donec in risus et felis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel dictum mi, euismod congue mi. Nunc porttitor accumsan ante nec accumsan. Sed a tellus nec urna pellentesque lacinia nec nec ex. Phasellus pharetra ac quam mattis dignissim. Nam a feugiat dolor. Maecenas vulputate urna ac augue tempor, imperdiet sollicitudin nisi tincidunt. Donec in risus et felis tempus"
     }
   ]
 }

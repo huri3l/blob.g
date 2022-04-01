@@ -1,7 +1,7 @@
 import { Flex, Heading, Image, Text, VStack } from '@chakra-ui/react';
 import { customScrollbar } from '../../styles/styles';
 
-interface VerticalCardProps {
+interface HorizontalCardProps {
   card: {
     image: {
       url: string;
@@ -13,7 +13,7 @@ interface VerticalCardProps {
   };
 }
 
-export function VerticalCard({ card }: VerticalCardProps) {
+export function HorizontalCard({ card }: HorizontalCardProps) {
   const { image, title, content, publishDate } = card;
 
   return (
