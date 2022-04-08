@@ -1,16 +1,9 @@
 import { Flex, Heading, Image, Text, VStack } from '@chakra-ui/react';
-import { customScrollbar } from '../../styles/styles';
+import { customScrollbar } from '../../../styles/styles';
+import { CardType } from './types.d';
 
 interface CardProps {
-  card: {
-    title: string;
-    content: string;
-    image?: {
-      url: string;
-      alt: string;
-    };
-    publishDate?: string;
-  };
+  card: CardType;
 }
 
 export function Card({ card }: CardProps) {
