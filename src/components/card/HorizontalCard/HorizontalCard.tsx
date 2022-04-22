@@ -1,19 +1,8 @@
 import { Flex, Heading, Image, Text, VStack } from '@chakra-ui/react';
-import { customScrollbar } from '../../styles/styles';
+import { customScrollbar } from '../../../styles/styles';
+import { HorizontalCardType } from './types';
 
-interface HorizontalCardProps {
-  card: {
-    image: {
-      url: string;
-      alt: string;
-    };
-    title: string;
-    content: string;
-    publishDate: string;
-  };
-}
-
-export function HorizontalCard({ card }: HorizontalCardProps) {
+export function HorizontalCard({ card }: HorizontalCardType) {
   const { image, title, content, publishDate } = card;
 
   return (
