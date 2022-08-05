@@ -34,7 +34,7 @@ export function Card({ card }: CardProps) {
         overflow="auto"
       >
         {publishDate && <Text variant="subtitle">{publishDate}</Text>}
-        <Heading size="lg">{title}</Heading>
+        <Heading fontSize={['md', '2xl', '2xl', '2xl']}>{title}</Heading>
         <Text overflowY="auto" css={customScrollbar}>
           {content}
         </Text>

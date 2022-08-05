@@ -10,25 +10,33 @@ export function HorizontalCard({ card }: HorizontalCardProps) {
   const { image, title, content, publishDate } = card;
 
   return (
-    <Flex maxW="850px" maxH="400px" borderRadius="8px" bgColor="gray.100">
+    <Flex
+      maxW="850px"
+      maxH="400px"
+      borderRadius="8px"
+      bgColor="gray.100"
+      direction={['column', 'row']}
+    >
       <Image
         src={image.url}
         alt={image.alt}
-        maxW={['200px', '300px', '400px']}
-        maxH={['200px', '300px', '400px']}
+        maxW={['100px', '250px', '300px', '300px', '300px']}
+        maxH={['100px', '250px', '300px', '300px', '300px']}
         objectFit="cover"
         borderLeftRadius="8px"
+        alignSelf="center"
+        justifySelf="center"
+        p={['5px', '0px']}
       />
       <VStack
         p="16px"
-        spacing="16px"
+        spacing={['5px', '16px']}
         align="flex-start"
         maxW="350px"
-        minW="200px"
-        h={['200px', '300px', '400px']}
+        h={['200px', '300px', '300px']}
       >
         <Text variant="subtitle">{publishDate}</Text>
-        <Heading size="lg">{title}</Heading>
+        <Heading fontSize={['md', '2xl', '2xl', '2xl']}>{title}</Heading>
         <Text overflowY="auto" css={customScrollbar}>
           {content}
         </Text>

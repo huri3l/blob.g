@@ -1,14 +1,15 @@
-import { Center, Heading, Text } from '@chakra-ui/react';
+import { Box, Center, Heading, Text } from '@chakra-ui/react';
 import { memo } from 'react';
 import { HORIZONTAL_CARD, REGULAR_CARD } from '../../../helpers/prismic/normalizers/home/constants';
-import { CardContainerType } from '../../../helpers/prismic/normalizers/home/types/normalized';
 import { CardSlider } from '../../carrousels/CardCarrousel';
 import { Card } from '../Card/Card';
 import { HorizontalCard } from '../HorizontalCard';
-
-interface CardContainerProps {
-  data?: CardContainerType[];
-}
+import {
+  CardCarouselWrapperProps,
+  CardContainerProps,
+  CardWrapperProps,
+  HorizontalCardWrapperProps,
+} from './types';
 
 const CardContainer = ({ data }: CardContainerProps) => {
   return (
@@ -16,59 +17,62 @@ const CardContainer = ({ data }: CardContainerProps) => {
       {data?.map((cardContainer) => {
         if (!cardContainer?.cards && !cardContainer?.horizontal_cards) return null;
 
-        if (cardContainer?.showAsCarousel && cardContainer?.cards) {
-          return (
-            <div key={`${Math.random()} ${cardContainer?.title}`} style={{ marginBottom: 60 }}>
-              <Heading textAlign="center" size="lg" mb="10px">
-                {cardContainer?.title}
-              </Heading>
-              <Text textAlign="center" fontSize="md">
-                {cardContainer?.description}
-              </Text>
-              <CardSlider cards={cardContainer.cards} />
-            </div>
-          );
-        }
-
         return (
-          <div style={{ marginBottom: 60 }} key={`${Math.random()} ${cardContainer?.title}`}>
+          <Box key={`${Math.random()} ${cardContainer?.title}`} m={2} mb={100}>
             <Heading textAlign="center" size="lg" mb="10px">
               {cardContainer?.title}
             </Heading>
-            <Text textAlign="center" fontSize="md">
+            <Text textAlign="center" fontSize={['md', 'lg']}>
               {cardContainer?.description}
             </Text>
-            {cardContainer?.type === REGULAR_CARD &&
-              cardContainer?.cards?.map((card) => {
-                if (!card?.title || !card?.content) return null;
 
-                return (
-                  <div key={`${Math.random()} ${card.title}`} style={{ marginBottom: 60 }}>
-                    <Center>
-                      <Card card={card} />
-                    </Center>
-                  </div>
-                );
-              })}
+            {cardContainer?.showAsCarousel ? (
+              <CardCarouselWrapper cardContainer={cardContainer} />
+            ) : (
+              <>
+                {cardContainer?.type === REGULAR_CARD &&
+                  cardContainer?.cards?.map((card) => <CardWrapper card={card} />)}
 
-            {cardContainer?.type === HORIZONTAL_CARD &&
-              cardContainer?.horizontal_cards?.map((card) => {
-                console.log(card);
-                if (!card?.title || !card?.content) return null;
-                console.log('chegou aqui');
-
-                return (
-                  <div key={`${Math.random()} ${card.title}`} style={{ marginBottom: 60 }}>
-                    <Center>
-                      <HorizontalCard card={card} />
-                    </Center>
-                  </div>
-                );
-              })}
-          </div>
+                {cardContainer?.type === HORIZONTAL_CARD &&
+                  cardContainer?.horizontal_cards?.map((card) => (
+                    <HorizontalCardWrapper card={card} />
+                  ))}
+              </>
+            )}
+          </Box>
         );
       })}
     </section>
+  );
+};
+
+const CardCarouselWrapper = ({ cardContainer }: CardCarouselWrapperProps) => {
+  if (!cardContainer || !cardContainer.cards) return null;
+
+  return <CardSlider cards={cardContainer.cards} />;
+};
+
+const CardWrapper = ({ card }: CardWrapperProps) => {
+  if (!card?.title || !card?.content) return null;
+
+  return (
+    <Box key={`${Math.random()} ${card.title}`} pt="32px">
+      <Center>
+        <Card card={card} />
+      </Center>
+    </Box>
+  );
+};
+
+const HorizontalCardWrapper = ({ card }: HorizontalCardWrapperProps) => {
+  if (!card?.title || !card?.content || !card?.image?.url || !card?.publishDate) return null;
+
+  return (
+    <Box key={`${Math.random()} ${card.title}`} pt="32px">
+      <Center>
+        <HorizontalCard card={card} />
+      </Center>
+    </Box>
   );
 };
 
