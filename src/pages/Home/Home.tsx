@@ -3,16 +3,16 @@ import { CardContainer } from '../../components/card/CardContainer';
 import { Footer } from '../../components/commons/Footer';
 import { Header } from '../../components/commons/Header';
 import { HomeDisplay } from '../../components/home/HomeDisplay';
-import { handleDocument } from '../../helpers/prismic/normalizers/home';
+import { getHome } from '../../helpers/prismic/normalizers/home';
 
 const Home = () => {
-  const homeData = handleDocument();
+  const data = getHome();
 
   return (
     <>
       <Header />
-      <HomeDisplay title={homeData?.title} description={homeData?.description} />
-      {homeData?.cardsContainer && <CardContainer data={homeData.cardsContainer} />}
+      <HomeDisplay title={data?.title} description={data?.description} />
+      {data?.cardsContainer && <CardContainer data={data.cardsContainer} />}
       <Footer />
     </>
   );

@@ -50,6 +50,7 @@ const normalizeCard = (container?: prismicCardContainerType) => {
       publishDate: card?.card_publish_date,
       title: card?.card_title?.[0]?.text ?? '',
       content: card?.card_content?.[0]?.text ?? '',
+      link: card?.card_link ?? '',
       image: {
         url: card?.card_image?.recommended?.url ?? card?.card_image?.url ?? '',
         alt: card?.card_image?.recommended?.alt ?? card?.card_image?.alt ?? '',
@@ -60,6 +61,7 @@ const normalizeCard = (container?: prismicCardContainerType) => {
       publishDate: card?.horizontal_card_publish_date ?? '',
       title: card?.horizontal_card_title?.[0]?.text ?? '',
       content: card?.horizontal_card_description?.[0]?.text ?? '',
+      link: card?.horizontal_card_link ?? '',
       image: {
         url:
           card?.horizontal_card_image?.recommended?.url ?? card?.horizontal_card_image?.url ?? '',

@@ -6,12 +6,14 @@ export interface prismicCardType {
   card_content?: prismicText[];
   card_publish_date?: string;
   card_image?: prismicImage;
+  card_link?: string;
 
   // Horizontal
   horizontal_card_title?: prismicText[];
   horizontal_card_publish_date?: string;
   horizontal_card_description?: prismicText[];
   horizontal_card_image?: prismicImage;
+  horizontal_card_link?: string;
 }
 
 export interface prismicCardContainerType {
