@@ -6,6 +6,7 @@ import { Banner } from '../../components/commons/Banner';
 import { Footer } from '../../components/commons/Footer';
 import { Header } from '../../components/commons/Header';
 import { getPost } from '../../helpers/prismic/normalizers/posts';
+import { formatDate } from '../../helpers/prismic/utils';
 
 const Posts = () => {
   const { slug } = useParams();
@@ -14,6 +15,8 @@ const Posts = () => {
   // [] TODO: Redirecionar para 404
   if (!data) return null;
 
+  const date = data?.publishDate ? formatDate(data.publishDate) : '';
+
   return (
     <div>
       <Header />
@@ -21,7 +24,7 @@ const Posts = () => {
       <Center as="main" mb="50px" py="50px" px="200px">
         <Flex direction="column" gap="25px">
           <Heading fontSize={['md', '2xl', '2xl', '2xl']}>{data?.title}</Heading>
-          {data?.publishDate && <Text variant="subtitle">{data?.publishDate}</Text>}
+          {date && <Text variant="subtitle">{date}</Text>}
 
           <div>
             <PrismicRichText field={data?.content} />

@@ -1,4 +1,5 @@
 import { Flex, Heading, Image, Text, VStack } from '@chakra-ui/react';
+import { formatDate } from '../../../helpers/prismic/utils';
 import { customScrollbar } from '../../../styles/styles';
 import { HorizontalCardType } from './types';
 
@@ -8,6 +9,8 @@ interface HorizontalCardProps {
 
 export function HorizontalCard({ card }: HorizontalCardProps) {
   const { image, title, content, publishDate, link } = card;
+
+  const date = formatDate(publishDate);
 
   return (
     <a href={`posts/${link}`}>
@@ -36,7 +39,7 @@ export function HorizontalCard({ card }: HorizontalCardProps) {
           maxW="350px"
           h={['200px', '300px', '300px']}
         >
-          <Text variant="subtitle">{publishDate}</Text>
+          <Text variant="subtitle">{date}</Text>
           <Heading fontSize={['md', '2xl', '2xl', '2xl']}>{title}</Heading>
           <Text overflowY="auto" css={customScrollbar}>
             {content}
