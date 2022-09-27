@@ -1,6 +1,6 @@
-import { CardContainerType } from '../../../helpers/prismic/normalizers/home/types/normalized';
-import { CardType } from '../Card/types';
-import { HorizontalCardType } from '../HorizontalCard';
+import { CardContainerType } from '@helpers/prismic/normalizers/home/types/normalized';
+import { CardType } from '@components/card/Card';
+import { HorizontalCardType } from '@components/card/HorizontalCard';
 
 export interface CardContainerProps {
   data?: CardContainerType[];

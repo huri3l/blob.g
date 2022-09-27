@@ -2,11 +2,11 @@ import { Center, Flex, Heading, Text } from '@chakra-ui/react';
 import { PrismicRichText } from '@prismicio/react';
 import { memo } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
-import { Banner } from '../../components/commons/Banner';
-import { Footer } from '../../components/commons/Footer';
-import { Header } from '../../components/commons/Header';
-import { getPost } from '../../helpers/prismic/normalizers/posts';
-import { formatDate } from '../../helpers/prismic/utils';
+import { Banner } from '@components/commons/Banner';
+import { Footer } from '@components/commons/Footer';
+import { Header } from '@components/commons/Header';
+import { getPost } from '@helpers/prismic/normalizers/posts';
+import { formatDate } from '@helpers/prismic/utils';
 
 const Posts = () => {
   const { slug } = useParams();

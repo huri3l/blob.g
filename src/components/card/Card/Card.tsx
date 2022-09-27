@@ -1,6 +1,6 @@
 import { Flex, Heading, Image, Text, VStack } from '@chakra-ui/react';
-import { formatDate } from '../../../helpers/prismic/utils';
-import { customScrollbar } from '../../../styles/styles';
+import { formatDate } from '@helpers/prismic/utils';
+import { customScrollbar } from '@/styles/utils';
 import { CardType } from './types.d';
 
 interface CardProps {

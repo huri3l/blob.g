@@ -1,8 +1,8 @@
 import { Box, Button, Center, Heading, Text, VStack } from '@chakra-ui/react';
 import { memo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Footer } from '../../components/commons/Footer';
-import { Header } from '../../components/commons/Header';
+import { Footer } from '@components/commons/Footer';
+import { Header } from '@components/commons/Header';
 
 const NotFound = () => {
   const navigate = useNavigate();

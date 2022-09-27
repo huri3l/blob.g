@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
-import { Home } from './pages/Home';
-import { NotFound } from './pages/NotFound';
-import { Posts } from './pages/Posts';
+import { Home } from '@pages/Home';
+import { NotFound } from '@pages/NotFound';
+import { Posts } from '@pages/Posts';
 
 export const MappedRoutes = () => {
   return (

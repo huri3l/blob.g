@@ -2,9 +2,9 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { PrismicProvider } from '@prismicio/react';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './App';
-import { client } from './services/prismic';
-import theme from './styles/theme';
+import App from '@/App';
+import { client } from '@services/prismic';
+import theme from '@styles/theme';
 
 const container = document.getElementById('root');
 

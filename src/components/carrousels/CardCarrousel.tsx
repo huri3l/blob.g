@@ -1,6 +1,6 @@
 import { Center } from '@chakra-ui/react';
-import { CardType, Card } from '../card/Card';
-import { Slider, Slide, SliderProps } from '../commons/Slider';
+import { CardType, Card } from '@components/card/Card';
+import { Slider, Slide, SliderProps } from '@components/commons/Slider';
 
 interface CardSliderProps {
   cards: CardType[];

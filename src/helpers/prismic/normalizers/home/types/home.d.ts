@@ -1,4 +1,4 @@
-import { prismicImage, prismicText } from '../../../types/general';
+import { prismicImage, prismicText } from '@helpers/prismic/types/general';
 
 export interface prismicCardType {
   // Regular

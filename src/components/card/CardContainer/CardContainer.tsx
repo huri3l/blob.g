@@ -1,9 +1,9 @@
 import { Box, Center, Heading, Text } from '@chakra-ui/react';
 import { memo } from 'react';
-import { HORIZONTAL_CARD, REGULAR_CARD } from '../../../helpers/prismic/normalizers/home/constants';
-import { CardSlider } from '../../carrousels/CardCarrousel';
-import { Card } from '../Card/Card';
-import { HorizontalCard } from '../HorizontalCard';
+import { HORIZONTAL_CARD, REGULAR_CARD } from '@helpers/prismic/normalizers/home/constants';
+import { CardSlider } from '@components/carrousels/CardCarrousel';
+import { Card } from '@components/card/Card';
+import { HorizontalCard } from '@components/card/HorizontalCard';
 import {
   CardCarouselWrapperProps,
   CardContainerProps,

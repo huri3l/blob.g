@@ -1,5 +1,5 @@
-import { CardType } from '../../../../../components/card/Card';
-import { HorizontalCardType } from '../../../../../components/card/HorizontalCard';
+import { CardType } from '@components/card/Card';
+import { HorizontalCardType } from '@components/card/HorizontalCard';
 
 export interface CardContainerType {
   type?: string;
