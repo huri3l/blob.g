@@ -5,6 +5,7 @@ import { Navigate, useParams } from 'react-router-dom';
 import { Banner } from '@components/commons/Banner';
 import { Footer } from '@components/commons/Footer';
 import { Header } from '@components/commons/Header';
+import { Content } from '@/components/prismic/Content';
 import { getPost } from '@helpers/prismic/normalizers/posts';
 import { formatDate } from '@helpers/prismic/utils';
 
@@ -12,9 +13,9 @@ const Posts = () => {
   const { slug } = useParams();
   const data = getPost(slug);
 
-  if (!data) {
-    return <Navigate to="/404" />;
-  }
+  // if (!data) {
+  //   return <Navigate to="/404" />;
+  // }
 
   const date = data?.publishDate ? formatDate(data.publishDate) : '';
 
@@ -27,9 +28,7 @@ const Posts = () => {
           <Heading fontSize={['md', '2xl', '2xl', '2xl']}>{data?.title}</Heading>
           {date && <Text variant="subtitle">{date}</Text>}
 
-          <div>
-            <PrismicRichText field={data?.content} />
-          </div>
+          <Content content={data?.content} />
         </Flex>
       </Center>
       <Footer />
