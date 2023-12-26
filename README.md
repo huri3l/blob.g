@@ -35,4 +35,4 @@ Follow these instructions to clone the repository and start running the project 
 - TypeScript
 
 
-Blob.g - Developed by Huriel Lopes - https://huriel.com.br/en-us
+**Blob.g** - Developed by Huriel Lopes - https://huriel.com.br/en-us
