@@ -24,6 +24,10 @@ Follow these instructions to clone the repository and start running the project 
    VITE_PRISMIC_ACCESS_TOKEN=your access token
    VITE_PRISMIC_ENVIRONMENT=your prismic environment
    ```
+5. Run the project
+    ```bash
+    yarn dev
+    ```
 
 ## Technologies used:
 - React
